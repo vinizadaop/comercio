@@ -1,0 +1,201 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "DROP DATABASE IF EXISTS comercio_sa;\nCREATE DATABASE comercio_sa;\nUSE comercio_sa;\nCREATE DATABASE IF NOT EXISTS comercio_sa;\nUSE comercio_sa;\n\nCREATE TABLE IF NOT EXISTS clientes (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    nome VARCHAR(255) NOT NULL,\n    cpf VARCHAR(14) NOT NULL UNIQUE,\n    data_nascimento DATE,\n    endereco TEXT\n);\n\nCREATE TABLE IF NOT EXISTS contatos (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    cliente_id INT,\n    tipo ENUM('Telefone', 'Email') NOT NULL,\n    valor VARCHAR(255) NOT NULL,\n    observacao TEXT,\n    FOREIGN KEY (cliente_id) REFERENCES clientes(id) ON DELETE CASCADE\n);\n",
+    "options": {
+        "tabSize": 4,
+        "indentSize": 4,
+        "insertSpaces": true,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 23,
+                    "column": 1
+                },
+                "position": {
+                    "lineNumber": 23,
+                    "column": 1
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 1,
+                "column": 1
+            },
+            "firstPositionDeltaTop": 0
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 3,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "429d0036-23db-423e-cc43-bc52639683ac",
+                            "content": "OK, 0 records retrieved in 0.89ms"
+                        },
+                        {
+                            "type": 2,
+                            "index": 1,
+                            "resultId": "e186e173-0e83-4c56-fe27-cdb1be9322ac",
+                            "content": "OK, 1 row affected in 0.845ms"
+                        },
+                        {
+                            "type": 2,
+                            "index": 2,
+                            "resultId": "4b2c3dc3-a5e1-43e1-f984-a173606df6a9",
+                            "content": "OK, 0 records retrieved in 0.417ms"
+                        }
+                    ]
+                },
+                "currentHeight": 65,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 36
+                        },
+                        "contentStart": 1,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 36,
+                            "length": 29
+                        },
+                        "contentStart": 37,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 65,
+                            "length": 17
+                        },
+                        "contentStart": 66,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 4,
+                "end": 22,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "4a451ae4-d81a-43fe-ca40-4e421a85e6d0",
+                            "content": "OK, 0 records retrieved in 0.487ms"
+                        },
+                        {
+                            "type": 2,
+                            "index": 1,
+                            "resultId": "ac3f5dd0-0358-42cb-e7ad-a211fce20114",
+                            "content": "OK, 0 records retrieved in 0.508ms"
+                        },
+                        {
+                            "type": 2,
+                            "index": 2,
+                            "resultId": "ffa7cf04-07d5-4e3a-fc19-5248cae28d12",
+                            "content": "OK, 0 records retrieved in 24.644ms"
+                        },
+                        {
+                            "type": 2,
+                            "index": 3,
+                            "resultId": "a73a9251-0db8-415d-f36a-4214686e1760",
+                            "content": "OK, 0 records retrieved in 20.272ms"
+                        }
+                    ]
+                },
+                "currentHeight": 84,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 42
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 42,
+                            "length": 17
+                        },
+                        "contentStart": 43,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 59,
+                            "length": 194
+                        },
+                        "contentStart": 61,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 253,
+                            "length": 271
+                        },
+                        "contentStart": 255,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 23,
+                "end": 23,
+                "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 0
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}
